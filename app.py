@@ -3,12 +3,12 @@ import sqlite3 # импортируем модуль sqlite3
 
 app = Flask(__name__) # создаем объект класса Flask
 
-@app.route('/')
-def index():
+@app.route('/') # создаем маршрут
+def index(): # создаем функцию index для обработки запросов по этому маршруту
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('static/database/database.sqlite3')
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
         user = cursor.fetchone()
@@ -18,20 +18,28 @@ def index():
             return render_template('login.html')
     return render_template('index.html')
 
-@app.route('/login')
-def login():
+@app.route('/login', methods=['GET', 'POST']) # создаем маршрут и указываем методы, которые он принимает на вход
+
+def login(): # создаем функцию login для обработки запросов по этому маршруту
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        conn = sqlite3.connect('users.db')
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
-        user = cursor.fetchone()
-        if user:
+        if verify_user(username, password):
             return render_template('todo_list.html', username=username)
         else:
-            return render_template('login.html')
+            return render_template('login.html', error='Invalid username or password')
     return render_template('login.html')
+
+def verify_user(username, password):
+    conn = sqlite3.connect('static/database/database.sqlite3')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
+    user = cursor.fetchone()
+    conn.close()
+    if user:
+        return True
+    else:
+        return False
 
 @app.route('/register')
 def register():
@@ -39,7 +47,7 @@ def register():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('static/database/database.sqlite3')
         cursor = conn.cursor()
         cursor.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', (username, email, password))
         conn.commit()
@@ -48,11 +56,11 @@ def register():
     return render_template('register.html')
 
 @app.route('/todo')
-def todo():
+def todo(): # создаем функцию todo для обработки запросов по этому маршруту
     if request.method == 'POST':
         task = request.form['task']
         username = request.form['username']
-        conn = sqlite3.connect('users.db')
+        conn = sqlite3.connect('static/database/database.sqlite3')
         cursor = conn.cursor()
         cursor.execute('INSERT INTO tasks (task, username) VALUES (?, ?)', (task, username))
         conn.commit()
