@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
-app = Flask(__name__)
+from flask import Flask, render_template, request # импортируем класс Flask, функцию render_template и request
+import sqlite3 # импортируем модуль sqlite3
+
+app = Flask(__name__) # создаем объект класса Flask
 
 @app.route('/')
 def index():
@@ -19,4 +21,4 @@ def todo():
     return render_template('todo_list.html', username=username)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
