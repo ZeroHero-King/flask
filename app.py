@@ -3,12 +3,15 @@ import sqlite3 # импортируем модуль sqlite3
 
 app = Flask(__name__) # создаем объект класса Flask
 
+def connect_db():
+    return sqlite3.connect('database.sqlite3')
+
 @app.route('/') # создаем маршрут
 def index(): # создаем функцию index для обработки запросов по этому маршруту
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        conn = sqlite3.connect('static/database/database.sqlite3')
+        conn = connect_db()
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
         user = cursor.fetchone()
@@ -31,7 +34,7 @@ def login(): # создаем функцию login для обработки з�
     return render_template('login.html')
 
 def verify_user(username, password):
-    conn = sqlite3.connect('static/database/database.sqlite3')
+    conn = connect_db()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
     user = cursor.fetchone()
@@ -47,7 +50,7 @@ def register():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        conn = sqlite3.connect('static/database/database.sqlite3')
+        conn = connect_db()
         cursor = conn.cursor()
         cursor.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', (username, email, password))
         conn.commit()
@@ -60,7 +63,7 @@ def todo(): # создаем функцию todo для обработки за�
     if request.method == 'POST':
         task = request.form['task']
         username = request.form['username']
-        conn = sqlite3.connect('static/database/database.sqlite3')
+        conn = connect_db()
         cursor = conn.cursor()
         cursor.execute('INSERT INTO tasks (task, username) VALUES (?, ?)', (task, username))
         conn.commit()
