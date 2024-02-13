@@ -11,7 +11,6 @@
         <h1>Мой проект Flask</h1>
         <nav>
             <ul>
-                <li><a href="{{ url_for('index') }}">Главная</a></li>
                 {% if 'user_id' in session %}
                     <li><a href="{{ url_for('logout') }}">Выйти</a></li>
                 {% else %}
@@ -25,8 +24,5 @@
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-        <p>&copy; 2024 Мой проект Flask</p>
-    </footer>
 </body>
 </html>

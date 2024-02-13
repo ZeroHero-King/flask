@@ -1,0 +1,314 @@
+/* Main Page */
+
+position: relative;
+width: 1280px;
+height: 832px;
+
+background: #4071F4;
+
+
+/* To-Do List */
+
+position: absolute;
+width: 323px;
+height: 77px;
+left: 478px;
+top: 96px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 823px;
+height: 53px;
+left: 147px;
+top: 239px;
+
+background: #FFFFFF;
+border-radius: 15px;
+
+
+/* Button */
+
+position: absolute;
+width: 141px;
+height: 53px;
+left: 979px;
+top: 239px;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 141px;
+height: 53px;
+left: 979px;
+top: 239px;
+
+background: #FFFFFF;
+border-radius: 15px;
+
+
+/* Add Task */
+
+position: absolute;
+width: 110px;
+height: 29px;
+left: 995px;
+top: 251px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+text-align: center;
+
+color: #4071F4;
+
+
+
+/* Line 1 */
+
+position: absolute;
+width: 952px;
+height: 0px;
+left: 160px;
+top: 340.5px;
+
+border: 3px solid #FFFFFF;
+transform: rotate(0.18deg);
+
+
+/* Hello, User */
+
+position: absolute;
+width: 130px;
+height: 30px;
+left: 979px;
+top: 18px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 30px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* LogOut Button */
+
+position: absolute;
+width: 88px;
+height: 30px;
+left: 1154px;
+top: 18px;
+
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 88px;
+height: 30px;
+left: 1154px;
+top: 18px;
+
+background: #FFFFFF;
+border-radius: 10px;
+
+
+/* LogOut */
+
+position: absolute;
+width: 55px;
+height: 18px;
+left: 1170px;
+top: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #4071F4;
+
+
+
+/* Weather */
+
+position: absolute;
+width: 278px;
+height: 127px;
+left: 43px;
+top: 24px;
+
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 278px;
+height: 127px;
+left: 43px;
+top: 24px;
+
+background: #FFFFFF;
+border-radius: 15px;
+
+
+/* Информация о погоде */
+
+position: absolute;
+width: 168px;
+height: 18px;
+left: 63px;
+top: 38px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Task #1 */
+
+position: absolute;
+width: 118px;
+height: 39px;
+left: 160px;
+top: 401px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Edit */
+
+position: absolute;
+width: 31px;
+height: 19px;
+left: 962px;
+top: 411px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #4071F4;
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 111px;
+height: 39px;
+left: 897px;
+top: 401px;
+
+
+
+/* Rectangle 12 */
+
+position: absolute;
+width: 111px;
+height: 39px;
+left: 897px;
+top: 401px;
+
+background: #75DC86;
+border-radius: 10px;
+
+
+/* Done */
+
+position: absolute;
+width: 41px;
+height: 19px;
+left: 932px;
+top: 411px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #FEFEFE;
+
+
+
+/* Group 4 */
+
+position: absolute;
+width: 111px;
+height: 39px;
+left: 1049px;
+top: 401px;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 111px;
+height: 39px;
+left: 1049px;
+top: 401px;
+
+background: #F97B7B;
+border-radius: 10px;
+
+
+/* Delete */
+
+position: absolute;
+width: 51px;
+height: 19px;
+left: 1079px;
+top: 411px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #FFFFFF;
+

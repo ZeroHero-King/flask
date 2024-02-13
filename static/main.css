@@ -1,0 +1,102 @@
+/* Main Page */
+
+position: relative;
+width: 1280px;
+height: 832px;
+
+background: #FFFFFF;
+
+
+/* Group 2 */
+
+position: absolute;
+width: 248px;
+height: 72px;
+left: 782px;
+top: 434px;
+
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 248px;
+height: 72px;
+left: 782px;
+top: 434px;
+
+background: #31ABF7;
+border-radius: 10px;
+
+
+/* Register */
+
+position: absolute;
+width: 125px;
+height: 39px;
+left: 843px;
+top: 450px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Group 1 */
+
+position: absolute;
+width: 248px;
+height: 72px;
+left: 250px;
+top: 434px;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 248px;
+height: 72px;
+left: 250px;
+top: 434px;
+
+background: #31ABF7;
+border-radius: 10px;
+
+
+/* Log In */
+
+position: absolute;
+width: 93px;
+height: 39px;
+left: 328px;
+top: 450px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* logo 1 */
+
+position: absolute;
+width: 356.74px;
+height: 300px;
+left: 465px;
+top: 122px;
+
+background: url(logo.png);
