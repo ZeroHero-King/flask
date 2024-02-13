@@ -1,76 +1,78 @@
-from flask import Flask, render_template, request # импортируем класс Flask, функцию render_template и request
-import sqlite3 # импортируем модуль sqlite3
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+from database import create_user, get_user_by_username_and_password, create_task, get_tasks_by_user_id, complete_task, delete_task
 
-app = Flask(__name__) # создаем объект класса Flask
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'
 
-def connect_db():
-    return sqlite3.connect('database.sqlite3')
+# Маршруты Flask
+@app.route('/')
+def index():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        tasks = get_tasks_by_user_id(user_id)
+        return render_template('todo_list.html', tasks=tasks)
+    else:
+        return render_template('index.html')
 
-@app.route('/') # создаем маршрут
-def index(): # создаем функцию index для обработки запросов по этому маршруту
+@app.route('/login', methods=['GET', 'POST'])
+def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        conn = connect_db()
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
-        user = cursor.fetchone()
+        user = get_user_by_username_and_password(username, password)
         if user:
-            return render_template('todo_list.html', username=username)
+            session['user_id'] = user['id']
+            flash('Вы успешно вошли', 'success')
+            return redirect(url_for('index'))
         else:
-            return render_template('login.html')
-    return render_template('index.html')
-
-@app.route('/login', methods=['GET', 'POST']) # создаем маршрут и указываем методы, которые он принимает на вход
-
-def login(): # создаем функцию login для обработки запросов по этому маршруту
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        if verify_user(username, password):
-            return render_template('todo_list.html', username=username)
-        else:
-            return render_template('login.html', error='Invalid username or password')
+            flash('Неправильное имя пользователя или пароль', 'error')
     return render_template('login.html')
 
-def verify_user(username, password):
-    conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
-    user = cursor.fetchone()
-    conn.close()
-    if user:
-        return True
-    else:
-        return False
-
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        conn = connect_db()
-        cursor = conn.cursor()
-        cursor.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', (username, email, password))
-        conn.commit()
-        conn.close()
-        return render_template('todo_list.html', username=username)
+        if create_user(username, email, password):
+            flash('Регистрация прошла успешно. Теперь вы можете войти', 'success')
+            return redirect(url_for('login'))
+        else:
+            flash('Пользователь с таким именем уже существует', 'error')
     return render_template('register.html')
 
-@app.route('/todo')
-def todo(): # создаем функцию todo для обработки запросов по этому маршруту
-    if request.method == 'POST':
-        task = request.form['task']
-        username = request.form['username']
-        conn = connect_db()
-        cursor = conn.cursor()
-        cursor.execute('INSERT INTO tasks (task, username) VALUES (?, ?)', (task, username))
-        conn.commit()
-        conn.close()
-        return render_template('todo_list.html', username=username)
-    username = request.args.get('username')
-    return render_template('todo_list.html', username=username)
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    flash('Вы успешно вышли', 'success')
+    return redirect(url_for('index'))
+
+@app.route('/add_task', methods=['POST'])
+def add_task():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        task_content = request.form['task']
+        create_task(task_content, user_id)
+        flash('Задача успешно добавлена', 'success')
+    return redirect(url_for('index'))
+
+@app.route('/complete_task/<int:task_id>', methods=['POST'])
+def complete_task(task_id):
+    if 'user_id' in session:
+        user_id = session['user_id']
+        complete_task(task_id, user_id)
+        flash('Задача отмечена как выполненная', 'success')
+    return redirect(url_for('index'))
+
+@app.route('/delete_task/<int:task_id>', methods=['POST'])
+def delete_task(task_id):
+    if 'user_id' in session:
+        user_id = session['user_id']
+        if delete_task(task_id, user_id):
+            flash('Задача успешно удалена', 'success')
+        else:
+            flash('Ошибка при удалении задачи', 'error')
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
