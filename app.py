@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
-from database import create_user, get_user_by_username_and_password, create_task, get_tasks_by_user_id, complete_task, delete_task
+from database import create_user, get_user_by_username_and_password, create_task, get_tasks_by_user_id, db_complete_task, db_delete_task
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -60,7 +60,7 @@ def add_task():
 def complete_task(task_id):
     if 'user_id' in session:
         user_id = session['user_id']
-        complete_task(task_id, user_id)
+        db_complete_task(task_id, user_id)
         flash('Задача отмечена как выполненная', 'success')
     return redirect(url_for('index'))
 
@@ -68,11 +68,12 @@ def complete_task(task_id):
 def delete_task(task_id):
     if 'user_id' in session:
         user_id = session['user_id']
-        if delete_task(task_id, user_id):
+        if db_delete_task(task_id, user_id):  # Передаем оба аргумента в функцию delete_task
             flash('Задача успешно удалена', 'success')
         else:
             flash('Ошибка при удалении задачи', 'error')
     return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)

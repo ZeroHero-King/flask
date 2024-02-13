@@ -40,13 +40,13 @@ def get_tasks_by_user_id(user_id):
     conn.close()
     return tasks
 
-def complete_task(task_id, user_id):
+def db_complete_task(task_id, user_id):
     conn = get_db_connection()
     conn.execute('UPDATE tasks SET completed = 1 WHERE id = ? AND user_id = ?', (task_id, user_id))
     conn.commit()
     conn.close()
 
-def delete_task(task_id, user_id):
+def db_delete_task(task_id, user_id):
     conn = get_db_connection()
     try:
         conn.execute('DELETE FROM tasks WHERE id = ? AND user_id = ?', (task_id, user_id))
