@@ -1,165 +1,144 @@
 /* Login Page */
-
-position: relative;
-width: 1280px;
-height: 832px;
-
-background: #4071F4;
-
+body {
+    position: relative;
+    width: 1280px;
+    height: 832px;
+    background: #4071F4;
+}
 
 /* Rectangle 3 */
-
-position: absolute;
-width: 500px;
-height: 490px;
-left: 390px;
-top: 171px;
-
-background: #FFFFFF;
-border-radius: 15px;
-
-
-/* Email */
-
-position: absolute;
-width: 382px;
-height: 59px;
-left: 449px;
-top: 349px;
-
-
-
-/* Rectangle 4 */
-
-position: absolute;
-width: 382px;
-height: 50px;
-left: 449px;
-top: 349px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
-
+.rectangle-3 {
+    position: absolute;
+    width: 500px;
+    height: 490px;
+    left: 390px;
+    top: 171px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
 
 /* Email */
-
-position: absolute;
-width: 94px;
-height: 34px;
-left: 449px;
-top: 374px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 18px;
-text-align: center;
-
-color: #B4B1B1;
-
-
-
-/* Password */
-
-position: absolute;
-width: 382px;
-height: 59px;
-left: 449px;
-top: 416px;
-
-
+.email-field {
+    position: absolute;
+    width: 382px;
+    height: 59px;
+    left: 449px;
+    top: 349px;
+}
 
 /* Rectangle 4 */
+.rectangle-4 {
+    position: absolute;
+    width: 382px;
+    height: 50px;
+    left: 449px;
+    top: 349px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
 
-position: absolute;
-width: 382px;
-height: 50px;
-left: 449px;
-top: 416px;
-
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
-
+/* Email Label */
+.email-label {
+    position: absolute;
+    width: 94px;
+    height: 34px;
+    left: 449px;
+    top: 374px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #B4B1B1;
+}
 
 /* Password */
-
-position: absolute;
-width: 94px;
-height: 34px;
-left: 470px;
-top: 441px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 18px;
-text-align: center;
-
-color: #B4B1B1;
-
-
-
-/* Button */
-
-position: absolute;
-width: 250px;
-height: 50px;
-left: 515px;
-top: 537px;
-
-
+.password-field {
+    position: absolute;
+    width: 382px;
+    height: 59px;
+    left: 449px;
+    top: 416px;
+}
 
 /* Rectangle 5 */
+.rectangle-5 {
+    position: absolute;
+    width: 382px;
+    height: 50px;
+    left: 449px;
+    top: 416px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
 
-position: absolute;
-width: 250px;
-height: 50px;
-left: 515px;
-top: 537px;
+/* Password Label */
+.password-label {
+    position: absolute;
+    width: 94px;
+    height: 34px;
+    left: 470px;
+    top: 441px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #B4B1B1;
+}
 
-background: #4071F4;
-border-radius: 10px;
+/* Button */
+.button {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 515px;
+    top: 537px;
+}
 
+/* Rectangle 5 */
+.rectangle-5 {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 515px;
+    top: 537px;
+    background: #4071F4;
+    border-radius: 10px;
+}
 
-/* Log In */
+/* Log In Button */
+.log-in-button {
+    position: absolute;
+    width: 95px;
+    height: 39px;
+    left: 592px;
+    top: 542px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
-position: absolute;
-width: 95px;
-height: 39px;
-left: 592px;
-top: 542px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 39px;
-/* identical to box height */
-text-align: center;
-
-color: #FFFFFF;
-
-
-
-/* Log In */
-
-position: absolute;
-width: 142px;
-height: 58px;
-left: 449px;
-top: 207px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 58px;
-/* identical to box height */
-text-align: center;
-
-color: #000000;
-
+/* Header */
+.header {
+    position: absolute;
+    width: 142px;
+    height: 58px;
+    left: 449px;
+    top: 207px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: #000000;
+}
