@@ -271,3 +271,7 @@ body {
     text-align: center;
     color: #FFFFFF;
 }
+.completed {
+    text-decoration: line-through; /* Добавление перечеркивания для выполненной задачи */
+    color: #888; /* Цвет для выполненной задачи */
+}

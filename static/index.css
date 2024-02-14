@@ -35,8 +35,6 @@ body {
     color: #FFFFFF;
   }
   
-  
-  
   /* Rectangle 1 */
   .rectangle-1 {
     position: absolute;
@@ -60,7 +58,6 @@ body {
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
-    /* identical to box height */
     text-align: center;
     color: #FFFFFF;
   }
