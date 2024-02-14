@@ -2,6 +2,10 @@
 
 {% block title %}Список дел{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='todo_list.css') }}">
+{% endblock %}
+
 {% block content %}
     <h2>Список дел</h2>
     <ul>

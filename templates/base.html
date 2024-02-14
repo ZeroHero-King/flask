@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <h1>Мой проект Flask</h1>
         <nav>
             <ul>
                 {% if 'user_id' in session %}
                     <li><a href="{{ url_for('logout') }}">Выйти</a></li>
-                {% else %}
-                    <li><a href="{{ url_for('login') }}">Войти</a></li>
-                    <li><a href="{{ url_for('register') }}">Регистрация</a></li>
                 {% endif %}
             </ul>
         </nav>

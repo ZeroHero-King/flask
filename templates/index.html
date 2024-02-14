@@ -1,7 +1,14 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-    <h2>Добро пожаловать на главную страницу!</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo1" alt="logo-1">
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}" class="rectangle-1 login">Log In</a></li>
+            <li><a href="{{ url_for('register') }}" class="rectangle-2 register">Register</a></li>
+        </ul>
+    </nav>
 {% endblock %}
