@@ -9,6 +9,7 @@ app.secret_key = 'your_secret_key'
 def index():
     if 'user_id' in session:
         user_id = session['user_id']
+        # username = session['username']
         tasks = get_tasks_by_user_id(user_id)
         return render_template('todo_list.html', tasks=tasks)
     else:

@@ -7,8 +7,19 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Список дел</h2>
+    <header>
+        <nav>
+            <ul>
+                
+                {% if 'user_id' in session %}
+                    <h1>Hello, {{ username }}</h1>
+                    <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
     <ul>
+        <h2>to-do list</h2>
         {% for task in tasks %}
             <li class="{% if task.completed %}completed{% endif %}">
                 {{ task.task }}
@@ -16,7 +27,7 @@
                     <input type="submit" value="Выполнено">
                 </form>
                 <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST">
-                    <input type="submit" value="Удалить">
+                    <div class = "rectangle-11"><input type="submit" value="Delete" class = ".delete"></div>
                 </form>
             </li>
         {% endfor %}

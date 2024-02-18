@@ -1,36 +1,39 @@
-
 /* General */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background: #FFFFFF;
+    background: white;
   }
-  
-  /* Rectangle 2 */
-  .rectangle-2 {
+
+  /* Log In */
+  .login {
     position: absolute;
-    width: 248px;
-    height: 72px;
-    left: 782px;
-    top: 434px;
-    background: #31ABF7;
-    border-radius: 10px;
-  }
-  
-  /* Register */
-  .register {
-    position: absolute;
-    width: 125px;
+    width: 93px;
     height: 39px;
-    left: 843px;
+    left: 325px;
     top: 450px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
-    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  /* Register */
+  .register {
+    position: absolute;
+    width: 125px;
+    height: 39px;
+    left: 845px;
+    top: 450px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
     text-align: center;
     color: #FFFFFF;
   }
@@ -45,23 +48,18 @@ body {
     background: #31ABF7;
     border-radius: 10px;
   }
-  
-  /* Log In */
-  .login {
-    position: absolute;
-    width: 93px;
-    height: 39px;
-    left: 311px;
-    top: 450px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  
+
+    /* Rectangle 2 */
+    .rectangle-2 {
+      position: absolute;
+      width: 248px;
+      height: 72px;
+      left: 782px;
+      top: 434px;
+      background: #31ABF7;
+      border-radius: 10px;
+    }
+
   /* logo 1 */
   .logo1 {
     position: absolute;

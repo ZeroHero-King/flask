@@ -6,15 +6,6 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                {% if 'user_id' in session %}
-                    <li><a href="{{ url_for('logout') }}">Выйти</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </header>
     <main>
         {% block content %}
         {% endblock %}

@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}Войти{% endblock %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
-{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
-    <h2>Войти</h2>
-    <form action="{{ url_for('login') }}" method="POST">
-        <input type="text" name="username" placeholder="Имя пользователя" required><br>
-        <input type="password" name="password" placeholder="Пароль" required><br>
-        <input type="submit" value="Войти">
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+<form action="{{ url_for('login') }}" method="POST">
+    <div class="login-container"></div>
+    <h1 class = "login-header">Log In</h1>
+    <form id="login-form">
+        <div class="form-group email">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+        </div>
+        <div class="form-group password">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Log In</button>
+        </div>
     </form>
+</body>
+</html>
 {% endblock %}

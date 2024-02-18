@@ -7,8 +7,10 @@
     <img src="{{ url_for('static', filename='logo.png') }}" class="logo1" alt="logo-1">
     <nav>
         <ul>
-            <a href="{{ url_for('login') }}" class="rectangle-1 login">Log In</a>
-            <a href="{{ url_for('register') }}" class="rectangle-2 register">Register</a>
+            <div class = "rectangle-1"></div>
+            <a href="{{ url_for('login') }}" class="login">Log In</a>
+            <div class = "rectangle-2"></div>
+            <a href="{{ url_for('register') }}" class="register">Register</a>
         </ul>
     </nav>
 {% endblock %}
