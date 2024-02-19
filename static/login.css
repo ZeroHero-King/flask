@@ -2,8 +2,6 @@
 body {
     position: relative;
     font-family: 'Helvetica';
-    width: 1280px;
-    height: 832px;
     background: #4071F4;
 }
 
@@ -22,7 +20,7 @@ body {
     width: 170px;
     height: 58px;
     left: 449px;
-    top: 207px;
+    top: 180px;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;

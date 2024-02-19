@@ -35,8 +35,12 @@ def register():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
+        confirm_password = request.form['confirm-password']
         if create_user(username, email, password):
             flash('Регистрация прошла успешно. Теперь вы можете войти', 'success')
+            if confirm_password != password:
+                flash('Пароли не совпадают', 'error')
+                return render_template('register.html')
             return redirect(url_for('login'))
         else:
             flash('Пользователь с таким именем уже существует', 'error')

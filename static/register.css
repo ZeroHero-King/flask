@@ -1,107 +1,44 @@
-/* Register Page */
+/* Login Page */
 body {
     position: relative;
-    width: 1280px;
-    height: 832px;
+    font-family: 'Helvetica';
     background: #4071F4;
 }
 
-/* Rectangle 3 */
-.rectangle-3 {
+.login-container{
     position: absolute;
     width: 500px;
     height: 490px;
     left: 390px;
     top: 171px;
+    line-height: 58.09px;
     background: #FFFFFF;
     border-radius: 15px;
 }
 
-/* Confirm Password */
-.confirm-password-field {
+.login-header {
     position: absolute;
-    width: 382px;
-    height: 59px;
+    width: 287px;
+    height: 58px;
     left: 449px;
-    top: 483px;
-}
-
-/* Rectangle 4 */
-.rectangle-4 {
-    position: absolute;
-    width: 382px;
-    height: 50px;
-    left: 449px;
-    top: 483px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-
-/* Confirm Password Label */
-.confirm-password-label {
-    position: absolute;
-    width: 200px;
-    height: 34px;
-    left: 449px;
-    top: 508px;
-    font-family: 'Inter';
+    top: 180px;
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
     text-align: center;
-    color: #B4B1B1;
+    color: #000000;
 }
 
-/* Email */
-.email-field {
-    position: absolute;
-    width: 382px;
-    height: 59px;
-    left: 449px;
-    top: 349px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-/* Rectangle 4 */
-.rectangle-4 {
-    position: absolute;
-    width: 382px;
-    height: 50px;
-    left: 449px;
-    top: 349px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+.form-group label {
+    display: none;
 }
 
-/* Email Label */
-.email-label {
-    position: absolute;
-    width: 94px;
-    height: 34px;
-    left: 449px;
-    top: 374px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #B4B1B1;
-}
-
-/* Username */
-.username-field {
-    position: absolute;
-    width: 382px;
-    height: 59px;
-    left: 449px;
-    top: 290px;
-}
-
-/* Rectangle 4 */
-.rectangle-4 {
+.username input {
     position: absolute;
     width: 382px;
     height: 50px;
@@ -110,35 +47,34 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-}
-
-/* Username Label */
-.username-label {
-    position: absolute;
-    width: 94px;
-    height: 34px;
-    left: 460px;
-    top: 315px;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     text-align: center;
     color: #B4B1B1;
+    border: none;
 }
 
-/* Password */
-.password-field {
+.email input {
     position: absolute;
     width: 382px;
-    height: 59px;
+    height: 50px;
     left: 449px;
-    top: 416px;
+    top: 349px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #B4B1B1;
+    border: none;
 }
 
-/* Rectangle 4 */
-.rectangle-4 {
+.password input {
     position: absolute;
     width: 382px;
     height: 50px;
@@ -147,35 +83,34 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-}
-
-/* Password Label */
-.password-label {
-    position: absolute;
-    width: 94px;
-    height: 34px;
-    left: 470px;
-    top: 441px;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     text-align: center;
     color: #B4B1B1;
+    border: none;
 }
 
-/* Button */
-.button {
+.confirm-password input {
     position: absolute;
-    width: 250px;
+    width: 382px;
     height: 50px;
-    left: 515px;
-    top: 577px;
+    left: 449px;
+    top: 483px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #B4B1B1;
+    border: none;
 }
 
-/* Rectangle 5 */
-.rectangle-5 {
+.form-group button {
     position: absolute;
     width: 250px;
     height: 50px;
@@ -183,36 +118,15 @@ body {
     top: 577px;
     background: #4071F4;
     border-radius: 10px;
-}
-
-/* Register Button */
-.register-button {
-    position: absolute;
-    width: 132px;
-    height: 39px;
-    left: 573px;
-    top: 582px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
     font-size: 32px;
+    font-weight: 700;
     line-height: 39px;
+    letter-spacing: 0em;
     text-align: center;
     color: #FFFFFF;
+    border: none;
 }
 
-/* Header */
-.header {
-    position: absolute;
-    width: 287px;
-    height: 58px;
-    left: 449px;
-    top: 210px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: center;
-    color: #000000;
+.form-group button:hover {
+    background-color: #0056b3;
 }
