@@ -1,72 +1,79 @@
 /* General */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background: white;
-  }
+  position: relative;
+  font-family: 'Helvetica';
+  width: 1280px;
+  height: 832px;
+  font-family: 'Helvetica';
+  background: white;
+}
 
-  /* Log In */
-  .login {
-    position: absolute;
-    width: 93px;
-    height: 39px;
-    left: 325px;
-    top: 450px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    color: #FFFFFF;
-  }
+/* Log In */
+.login {
+  margin-bottom: 15px;
+}
 
-  /* Register */
-  .register {
-    position: absolute;
-    width: 125px;
-    height: 39px;
-    left: 845px;
-    top: 450px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    color: #FFFFFF;
-  }
-  
-  /* Rectangle 1 */
-  .rectangle-1 {
-    position: absolute;
-    width: 248px;
-    height: 72px;
-    left: 250px;
-    top: 434px;
-    background: #31ABF7;
-    border-radius: 10px;
-  }
+.login label {
+  display: none;
+}
+.login a {
+  position: absolute;
+  width: 248px;
+  height: 72px;
+  left: 250px;
+  top: 434px;
+  background: #31ABF7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 64px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+}
+.login a:hover {
+  background-color: #0056b3;
+}
 
-    /* Rectangle 2 */
-    .rectangle-2 {
-      position: absolute;
-      width: 248px;
-      height: 72px;
-      left: 782px;
-      top: 434px;
-      background: #31ABF7;
-      border-radius: 10px;
-    }
+/* Register */
+.register {
+  margin-bottom: 15px;
+}
 
-  /* logo 1 */
-  .logo1 {
-    position: absolute;
-    width: 356.74px;
-    height: 300px;
-    left: 465px;
-    top: 122px;
-  }
-  
-  
+.register label {
+  display: none;
+}
+
+.register a {
+  position: absolute;
+  width: 248px;
+  height: 72px;
+  left: 782px;
+  top: 434px;
+  background: #31ABF7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 64px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+}
+
+.register a:hover {
+  background-color: #0056b3;
+}
+
+.logo1 {
+  position: absolute;
+  width: 356.74px;
+  height: 300px;
+  left: 465px;
+  top: 122px;
+}

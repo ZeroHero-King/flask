@@ -3,14 +3,20 @@
 {% block title %}Главная{% endblock %}
 
 {% block content %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <img src="{{ url_for('static', filename='logo.png') }}" class="logo1" alt="logo-1">
-    <nav>
-        <ul>
-            <div class = "rectangle-1"></div>
-            <a href="{{ url_for('login') }}" class="login">Log In</a>
-            <div class = "rectangle-2"></div>
-            <a href="{{ url_for('register') }}" class="register">Register</a>
-        </ul>
-    </nav>
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+<img src="{{ url_for('static', filename='logo.png') }}" class="logo1" alt="logo-1">
+<body>
+    <ul>
+        <!-- <div class = "rectangle-1"></div>
+        <a href="{{ url_for('login') }}" class="login">Log In</a>
+        <div class = "rectangle-2"></div>
+        <a href="{{ url_for('register') }}" class="register">Register</a> -->
+        <form class = "login">
+            <a href="{{ url_for('login') }}" button type="submit">Log In</button>
+        </form>
+        <form class = "register">
+            <a href="{{ url_for('register') }}" button type="submit">Register</button>
+            </form>
+    </ul>
+</body>
 {% endblock %}
