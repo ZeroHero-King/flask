@@ -29,7 +29,7 @@ def login():
             flash('Неправильное имя пользователя или пароль', 'error')
     return render_template('login.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
