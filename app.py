@@ -29,7 +29,7 @@ def login():
             flash('Неправильное имя пользователя или пароль', 'error')
     return render_template('login.html')
 
-@app.route('/register', methods=['POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
@@ -40,11 +40,12 @@ def register():
             flash('Регистрация прошла успешно. Теперь вы можете войти', 'success')
             if confirm_password != password:
                 flash('Пароли не совпадают', 'error')
-                return render_template('register.html')
+                return render_template('register.html')  # Returning back to registration page with an error message
             return redirect(url_for('login'))
         else:
             flash('Пользователь с таким именем уже существует', 'error')
     return render_template('register.html')
+
 
 @app.route('/logout')
 def logout():
