@@ -1,7 +1,7 @@
 import sqlite3
 
 # Создаем соединение с базой данных
-conn = sqlite3.connect('users.sqlite3')
+conn = sqlite3.connect('database/users.sqlite3')
 
 # Создаем курсор для выполнения операций SQL
 cur = conn.cursor()
