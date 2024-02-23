@@ -3,12 +3,14 @@
 {% block title %}To-Do List{% endblock %}
 
 {% block content %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='tes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='todo_list.css') }}">
 </head>
 <body>
 
 <div class="header">
-    <div class="notification">Информация о погоде</div>
+    <div class="notification">
+        <h1>Информация о погоде</h1>
+    </div>
     <h1>To-Do List</h1>
     <div class="user-info">
         {% if username %}
@@ -24,20 +26,22 @@
 
 <div class="task-input">
     <form action="{{ url_for('add_task') }}" method="POST">
-        <input type="text" name="task" placeholder="Enter your task">
+        <input type="text" name="task" placeholder="">
         <button type="submit">Add Task</button>
     </form>
 </div>
+
+<hr class ="line">
 
 <div class="task-list">
     {% for task in tasks %}
         <div class="task {% if task.completed %} completed {% endif %}">
             {{ task.task }}
             <form action="{{ url_for('complete_task', task_id=task.id) }}" method="POST">
-                <button type="submit">Done</button>
+                <button type="submit" class="done-button">Done</button>
             </form>
             <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST">
-                <button type="submit">Delete</button>
+                <button type="submit" class="delete-button">Delete</button>
             </form>
         </div>
     {% endfor %}

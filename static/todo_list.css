@@ -1,26 +1,91 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: helvetica;
+    background: #4071F4;
   }
   
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000080;
     color: white;
     padding: 20px;
   }
-  
-  .notification {
-     background-color:white; 
-     color:black; 
-     padding:10px; 
+
+  .header h1 {
+    position: absolute;
+    width: 323px;
+    height: 77px;
+    left: 478px;
+    top: 96px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+    color: #FFFFFF;
   }
   
+  .line {
+    position: absolute;
+    width: 952px;
+    height: 0px;
+    left: 160px;
+    top: 340.5px;
+    border: 3px solid #FFFFFF;
+    transform: rotate(0.18deg);
+  }
+
+  .notification {
+    position: absolute;
+    width: 278px;
+    height: 127px;
+    left: 43px;
+    top: 24px;
+    background: #FFFFFF;
+    border-radius: 15px;
+  }
+  .notification h1 {
+    position: absolute;
+    width: 168px;
+    height: 18px;
+    left: 63px;
+    top: 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .user-info {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;  
+    width: 130px;
+    height: 30px;
+    left: 979px;
+    top: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+  }
   .user-info button {
-     margin-left:20px; 
+    position: absolute;
+    width: 88px;
+    height: 30px;
+    left: 175px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #4071F4;
   }
   
   .task-input {
@@ -31,24 +96,82 @@ body, html {
   }
   
   .task-input input {
-   width :300px ; height :40px ; margin-right :20px ; }
-  
-  .task-list .task{
-   display:flex ;
-   justify-content :space-between ;
-   align-items :center ;
-   border-bottom :2 px solid black ;
-   padding :20 px ;
+    position: absolute;
+    width: 823px;
+    height: 53px;
+    left: 147px;
+    top: 239px;
+    background: #FFFFFF;
+    border-radius: 15px;
   }
   
+  .task-input button {
+    position: absolute;
+    width: 141px;
+    height: 53px;
+    left: 979px;
+    top: 239px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #4071F4;
+
+  }
+
   .task {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
+    position: absolute;
+    width: 118px;
+    height: 39px;
+    left: 160px;
+    top: 401px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;  
+    color: #FFFFFF;
 }
 
 .task.completed {
-    background-color: #c0e7a5; /* Light green for completed tasks */
     text-decoration: line-through; /* Strike through completed tasks */
+}
+
+/* Стили для кнопки Done */
+button.done-button {
+    position: absolute;
+    width: 111px;
+    height: 39px;
+    top: 0px;
+    left: 697px;
+    background: #75DC86;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FEFEFE;
+    /* Добавьте любые другие стили, необходимые для кнопки "Done" */
+}
+
+/* Стили для кнопки Delete */
+button.delete-button {
+    position: absolute;
+    width: 111px;
+    height: 39px;
+    top: 0px;
+    left: 849px;
+    background: #FF6B6B;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 10px;
+    /* Добавьте любые другие стили, необходимые для кнопки "Delete" */
 }
