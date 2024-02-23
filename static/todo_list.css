@@ -121,57 +121,54 @@ body, html {
     color: #4071F4;
 
   }
+  .task-list {
+    position: relative;
+    margin-top: 401px;
+    margin-left: 160px;
+}
 
-  .task {
-    position: absolute;
-    width: 118px;
-    height: 39px;
-    left: 160px;
-    top: 401px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;  
-    color: #FFFFFF;
+.task {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;  
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.done-button,
+.delete-button {
+  position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.done-button {
+  top: 0px;
+  left: 697px;
+  width: 111px;
+  height: 39px;
+  background: #75DC86;
+}
+
+.delete-button {
+  top: 0px;
+  left: 849px;
+  width: 111px;
+  height: 39px;
+  background: #FF6B6B;
 }
 
 .task.completed {
-    text-decoration: line-through; /* Strike through completed tasks */
-}
-
-/* Стили для кнопки Done */
-button.done-button {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    top: 0px;
-    left: 697px;
-    background: #75DC86;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FEFEFE;
-    /* Добавьте любые другие стили, необходимые для кнопки "Done" */
-}
-
-/* Стили для кнопки Delete */
-button.delete-button {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    top: 0px;
-    left: 849px;
-    background: #FF6B6B;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-    border-radius: 10px;
-    /* Добавьте любые другие стили, необходимые для кнопки "Delete" */
+  text-decoration: line-through;
 }

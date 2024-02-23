@@ -36,16 +36,21 @@
 <div class="task-list">
     {% for task in tasks %}
         <div class="task {% if task.completed %} completed {% endif %}">
-            {{ task.task }}
-            <form action="{{ url_for('complete_task', task_id=task.id) }}" method="POST">
-                <button type="submit" class="done-button">Done</button>
-            </form>
-            <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST">
-                <button type="submit" class="delete-button">Delete</button>
-            </form>
+            <div class="task-content">
+                {{ task.task }}
+            </div>
+            <div class="task-buttons">
+                <form action="{{ url_for('complete_task', task_id=task.id) }}" method="POST">
+                    <button type="submit" class="done-button">Done</button>
+                </form>
+                <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST">
+                    <button type="submit" class="delete-button">Delete</button>
+                </form>
+            </div>
         </div>
     {% endfor %}
 </div>
+
 </div>
 </body>
 </html>
