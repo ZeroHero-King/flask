@@ -6,6 +6,8 @@ from db import create_db
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 create_db() # Создаем базу данных при запуске приложения
+RAPIDAPI_KEY = "your_rapidAPI_key" # Вставьте ваш ключ от RapidAPI
+#ip = 'your_ip_adress' # Вставьте ваш IP-адрес
 
 @app.route('/')
 def index():
@@ -15,7 +17,10 @@ def index():
         user = get_user_by_id(user_id)
         if user:
             username = user['username']
-            weather = get_weather_by_ip(ip)
+            try:
+                weather = get_weather_by_ip(ip, RAPIDAPI_KEY)
+            except:
+                weather = "Failed to get weather forecast"
             tasks = get_tasks_by_user_id(user_id)
             return render_template('todo_list.html', username=username, tasks=tasks, weather=weather)
     return render_template('index.html')
