@@ -86,6 +86,7 @@ body, html {
     line-height: 18px;
     text-align: center;
     color: #4071F4;
+    border: none;
   }
   
   .task-input {
@@ -103,6 +104,7 @@ body, html {
     top: 239px;
     background: #FFFFFF;
     border-radius: 15px;
+    border: none;
   }
   
   .task-input button {
@@ -119,11 +121,11 @@ body, html {
     line-height: 29px;
     text-align: center;
     color: #4071F4;
-
+    border: none;
   }
   .task-list {
     position: relative;
-    margin-top: 401px;
+    margin-top: 270px;
     margin-left: 160px;
 }
 
@@ -151,6 +153,7 @@ body, html {
   text-align: center;
   color: #FFFFFF;
   border-radius: 10px;
+  border: none;
 }
 
 .done-button {
