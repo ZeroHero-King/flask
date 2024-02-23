@@ -1,277 +1,54 @@
-/* Main Page */
-body {
-    position: relative;
-    width: 1280px;
-    height: 832px;
-    background: #4071F4;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000080;
+    color: white;
+    padding: 20px;
+  }
+  
+  .notification {
+     background-color:white; 
+     color:black; 
+     padding:10px; 
+  }
+  
+  .user-info button {
+     margin-left:20px; 
+  }
+  
+  .task-input {
+     display:flex; 
+     justify-content:center; 
+     align-items:center; 
+     margin-top:50px; 
+  }
+  
+  .task-input input {
+   width :300px ; height :40px ; margin-right :20px ; }
+  
+  .task-list .task{
+   display:flex ;
+   justify-content :space-between ;
+   align-items :center ;
+   border-bottom :2 px solid black ;
+   padding :20 px ;
+  }
+  
+  .task {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
 }
 
-/* To-Do List */
-.to-do-list {
-    position: absolute;
-    width: 323px;
-    height: 77px;
-    left: 478px;
-    top: 96px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 77px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-/* Rectangle 6 */
-.rectangle-6 {
-    position: absolute;
-    width: 823px;
-    height: 53px;
-    left: 147px;
-    top: 239px;
-    background: #FFFFFF;
-    border-radius: 15px;
-}
-
-/* Button */
-.button {
-    position: absolute;
-    width: 141px;
-    height: 53px;
-    left: 979px;
-    top: 239px;
-}
-
-/* Rectangle 7 */
-.rectangle-7 {
-    position: absolute;
-    width: 141px;
-    height: 53px;
-    left: 979px;
-    top: 239px;
-    background: #FFFFFF;
-    border-radius: 15px;
-}
-
-/* Add Task */
-.add-task {
-    position: absolute;
-    width: 110px;
-    height: 29px;
-    left: 995px;
-    top: 251px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #4071F4;
-}
-
-/* Line 1 */
-.line-1 {
-    position: absolute;
-    width: 952px;
-    height: 0px;
-    left: 160px;
-    top: 340.5px;
-    border: 3px solid #FFFFFF;
-    transform: rotate(0.18deg);
-}
-
-/* Hello, User */
-.hello-user {
-    position: absolute;
-    width: 130px;
-    height: 30px;
-    left: 979px;
-    top: 18px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-/* LogOut Button */
-.log-out-button {
-    position: absolute;
-    width: 88px;
-    height: 30px;
-    left: 1154px;
-    top: 18px;
-}
-
-/* Rectangle 8 */
-.rectangle-8 {
-    position: absolute;
-    width: 88px;
-    height: 30px;
-    left: 1154px;
-    top: 18px;
-    background: #FFFFFF;
-    border-radius: 10px;
-}
-
-/* LogOut */
-.log-out {
-    position: absolute;
-    width: 55px;
-    height: 18px;
-    left: 1170px;
-    top: 24px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #4071F4;
-}
-
-/* Weather */
-.weather {
-    position: absolute;
-    width: 278px;
-    height: 127px;
-    left: 43px;
-    top: 24px;
-}
-
-/* Rectangle 9 */
-.rectangle-9 {
-    position: absolute;
-    width: 278px;
-    height: 127px;
-    left: 43px;
-    top: 24px;
-    background: #FFFFFF;
-    border-radius: 15px;
-}
-
-/* Информация о погоде */
-.weather-info {
-    position: absolute;
-    width: 168px;
-    height: 18px;
-    left: 63px;
-    top: 38px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #000000;
-}
-
-/* Task #1 */
-.task-1 {
-    position: absolute;
-    width: 118px;
-    height: 39px;
-    left: 160px;
-    top: 401px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-/* Edit */
-.edit {
-    position: absolute;
-    width: 31px;
-    height: 19px;
-    left: 962px;
-    top: 411px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #4071F4;
-}
-
-/* Group 3 */
-.group-3 {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    left: 897px;
-    top: 401px;
-}
-
-/* Rectangle 12 */
-.rectangle-12 {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    left: 897px;
-    top: 401px;
-    background: #75DC86;
-    border-radius: 10px;
-}
-
-/* Done */
-.done {
-    position: absolute;
-    width: 41px;
-    height: 19px;
-    left: 932px;
-    top: 411px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FEFEFE;
-}
-
-/* Group 4 */
-.group-4 {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    left: 1049px;
-    top: 401px;
-}
-
-/* Rectangle 11 */
-.rectangle-11 {
-    position: absolute;
-    width: 111px;
-    height: 39px;
-    left: 1049px;
-    top: 401px;
-    background: #F97B7B;
-    border-radius: 10px;
-}
-
-/* Delete */
-.delete {
-    position: absolute;
-    width: 51px;
-    height: 19px;
-    left: 1079px;
-    top: 411px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-}
-.completed {
-    text-decoration: line-through; /* Добавление перечеркивания для выполненной задачи */
-    color: #888; /* Цвет для выполненной задачи */
+.task.completed {
+    background-color: #c0e7a5; /* Light green for completed tasks */
+    text-decoration: line-through; /* Strike through completed tasks */
 }

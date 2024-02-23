@@ -34,6 +34,12 @@ def create_task(task_content, user_id):
     finally:
         conn.close()
 
+def get_user_by_id(user_id):
+    conn = get_db_connection()
+    user = conn.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
+    conn.close()
+    return user
+
 def get_tasks_by_user_id(user_id):
     conn = get_db_connection()
     tasks = conn.execute('SELECT * FROM tasks WHERE user_id = ?', (user_id,)).fetchall()

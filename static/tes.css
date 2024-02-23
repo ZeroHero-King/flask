@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000080;
+    color: white;
+    padding: 20px;
+  }
+  
+  .notification {
+     background-color:white; 
+     color:black; 
+     padding:10px; 
+  }
+  
+  .user-info button {
+     margin-left:20px; 
+  }
+  
+  .task-input {
+     display:flex; 
+     justify-content:center; 
+     align-items:center; 
+     margin-top:50px; 
+  }
+  
+  .task-input input {
+   width :300px ; height :40px ; margin-right :20px ; }
+  
+  .task-list .task{
+   display:flex ;
+   justify-content :space-between ;
+   align-items :center ;
+   border-bottom :2 px solid black ;
+   padding :20 px ;
+  }
+  
+  .task {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.task.completed {
+    background-color: #c0e7a5; /* Light green for completed tasks */
+    text-decoration: line-through; /* Strike through completed tasks */
+}
