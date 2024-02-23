@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
-
 {% block title %}To-Do List{% endblock %}
-
 {% block content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='todo_list.css') }}">
 </head>
 <body>
-
 <div class="header">
     <div class="notification">
-        <h1>Информация о погоде</h1>
+        <h1>{{ weather }}</h1>
     </div>
     <h1>To-Do List</h1>
     <div class="user-info">
@@ -23,16 +20,13 @@
         {% endif %}
     </div>
 </div>
-
 <div class="task-input">
     <form action="{{ url_for('add_task') }}" method="POST">
         <input type="text" name="task" placeholder="">
         <button type="submit">Add Task</button>
     </form>
 </div>
-
 <hr class ="line">
-
 <div class="task-list">
     {% for task in tasks %}
         <div class="task {% if task.completed %} completed {% endif %}">
@@ -50,7 +44,6 @@
         </div>
     {% endfor %}
 </div>
-
 </div>
 </body>
 </html>

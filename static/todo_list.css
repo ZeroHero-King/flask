@@ -44,12 +44,13 @@ body, html {
     background: #FFFFFF;
     border-radius: 15px;
   }
+
   .notification h1 {
     position: absolute;
     width: 168px;
     height: 18px;
-    left: 63px;
-    top: 38px;
+    left: 53px;
+    top: 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -123,6 +124,7 @@ body, html {
     color: #4071F4;
     border: none;
   }
+  
   .task-list {
     position: relative;
     margin-top: 270px;
